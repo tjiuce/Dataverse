@@ -1412,7 +1412,7 @@ Managing finances has never been easier! Dataverse’s finance tracking features
 
     link1 = Label(menu,fg=theme["White"],bg=theme["Neutral"],image=globe,text="Visit Website",compound='left',width=170, relief="sunken",anchor='w',font="poppins 10",cursor="hand2",padx=10)
     link1.pack(pady=(280,0),padx=15)
-    link1.bind("<Button-1>", lambda e: callback("https://multiverse-dataverse.netlify.app/"))
+    link1.bind("<Button-1>", lambda e: callback("https://multiverseweb.github.io/Dataverse"))
 
 
     # adding version label to the home page
@@ -1459,6 +1459,12 @@ my_img=ImageTk.PhotoImage(img)
 label1 = Label( root, image = my_img, borderwidth=0, highlightthickness=0)
 label1.place(x = 200, y = 0)
 dark(root)
+try:
+    ico_path = os.path.join(os.path.dirname(icons["2dlogo"]), "3dlogo.ico")
+    if os.path.exists(ico_path):
+        root.iconbitmap(ico_path)
+except Exception:
+        pass
 photo = PhotoImage(file = icons["2dlogo"])
 root.iconphoto(False, photo)
 root.configure(bg=theme["Black"])

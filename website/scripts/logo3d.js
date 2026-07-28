@@ -29,11 +29,9 @@ function init3DLogo() {
     // Controls setup (Trackball for full rotation over all axes)
     const controls = new THREE.TrackballControls(camera, renderer.domElement);
     controls.rotateSpeed = 3.0;
-    controls.zoomSpeed = 1.2;
+    controls.zoomSpeed = 0;
     controls.noPan = true;
-    controls.noZoom = false;
-    controls.minDistance = 2;
-    controls.maxDistance = 15;
+    controls.noZoom = true;
     controls.dynamicDampingFactor = 0.15;
 
     // Axes and grids hidden as requested
@@ -171,6 +169,9 @@ function init3DLogo() {
         camera.bottom = -frustumSize / 2;
         camera.updateProjectionMatrix();
         renderer.setSize(container.clientWidth, container.clientHeight);
+        if (controls && typeof controls.handleResize === 'function') {
+            controls.handleResize();
+        }
     });
 }
 

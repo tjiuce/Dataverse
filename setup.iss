@@ -8,14 +8,14 @@ OutputBaseFilename=Dataverse_Setup
 Compression=lzma
 SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
+SetupIconFile=c:\Users\iamte\Desktop\GitHub Repos\Dataverse\software\images\icon.ico
 
 [Files]
-Source: "c:\Users\iamte\Desktop\GitHub Repos\Dataverse\dist\Dataverse\Dataverse.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "c:\Users\iamte\Desktop\GitHub Repos\Dataverse\dist\Dataverse\_internal\*"; DestDir: "{app}\_internal"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "c:\Users\iamte\Desktop\GitHub Repos\Dataverse\dist\Dataverse.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
-Name: "{group}\Dataverse"; Filename: "{app}\Dataverse.exe"
-Name: "{commondesktop}\Dataverse"; Filename: "{app}\Dataverse.exe"; Tasks: desktopicon
+Name: "{group}\Dataverse"; Filename: "{app}\Dataverse.exe"; IconFilename: "{app}\Dataverse.exe"
+Name: "{commondesktop}\Dataverse"; Filename: "{app}\Dataverse.exe"; IconFilename: "{app}\Dataverse.exe"; Tasks: desktopicon
 
 [Tasks]
 Name: "desktopicon"; Description: "Create a &desktop shortcut"; GroupDescription: "Additional icons:"
