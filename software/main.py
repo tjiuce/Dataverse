@@ -1412,7 +1412,7 @@ Managing finances has never been easier! Dataverse’s finance tracking features
 
     link1 = Label(menu,fg=theme["White"],bg=theme["Neutral"],image=globe,text="Visit Website",compound='left',width=170, relief="sunken",anchor='w',font="poppins 10",cursor="hand2",padx=10)
     link1.pack(pady=(280,0),padx=15)
-    link1.bind("<Button-1>", lambda e: callback("https://multiverseweb.github.io/Dataverse"))
+    link1.bind("<Button-1>", lambda e: callback("https://tjiuce.github.io/Dataverse"))
 
 
     # adding version label to the home page
